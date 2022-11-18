@@ -11,7 +11,7 @@ disconnect
 - ```Get-PSSession | Remove-PSSession```
 
 o365 powershell calander
-website with info***https://theitbros.com/add-calendar-permissions-in-office-365-via-powershell/***
+website with info ***https://theitbros.com/add-calendar-permissions-in-office-365-via-powershell/***
 
 Add-MailboxFolderPermission username:\calendar –user username –accessrights reviewer```
 - ``` Set-MailboxFolderPermission username:\calendar –user username –accessrights reviewer```
