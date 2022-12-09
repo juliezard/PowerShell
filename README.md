@@ -50,7 +50,8 @@ get list of blocked users...remove manager
 
 ```Get-MsolUser -All | Where {$_.BlockCredential -eq $True} | Select UserPrincipalName | Export-CSV "C:\Users\username\Desktop\it\o365\blocked.csv"
 $user_file | ForEach {Set-user -Identity $_.login_name -Manager $Null}
-$user_file = Import-CSV "C:\Users\username\Desktop\it\o365\blocked.csv"```
+$user_file = Import-CSV "C:\Users\username\Desktop\it\o365\blocked.csv"
+```
 
 Update distro
 
