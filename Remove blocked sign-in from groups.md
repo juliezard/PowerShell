@@ -1,4 +1,4 @@
-write-host "Make sure you are connected to AzureAd using: Connect-AzureAD" 
+```write-host "Make sure you are connected to AzureAd using: Connect-AzureAD" 
 $upn = Read-Host -Prompt 'Input the user name'
 Set-AzureADUser -ObjectID $upn -AccountEnabled $false
 write-host "Disabled User:" $upn
@@ -51,3 +51,4 @@ $owned | Select-Object DisplayName, Id
 #Groups that the user was a member of:
 Write-Output "$upn was removed as Member of:"
 $memberof | Select-Object DisplayName, Id
+```
