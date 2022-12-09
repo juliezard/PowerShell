@@ -12,4 +12,5 @@ if ($lockedAccounts.Count -eq 0) {
     foreach ($account in $lockedAccounts) {
         Write-Output "Account: $($account.Name) is locked"
     }
-}```
+}
+```
