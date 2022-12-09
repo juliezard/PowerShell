@@ -33,11 +33,11 @@ Get connected:
 ```Connect-EXOPSSession -UserPrincipalName user@domain.com```
 
 Export Rules:
-Get-Mailbox -ResultSize Unlimited | % { Get-InboxRule -Mailbox $_.Alias | Select Enabled,Name,Priority,From,SentTo,CopyToFolder,DeleteMessage,ForwardTo,MarkAsRead,MoveToFolder,RedirectTo,@{Expression={$_.SendTextMessageNotificationTo};Label="SendTextMessageNotificationTo"},MailboxOwnerId } | Export-Csv C:\Users\username\Desktop\it\o365\forwards.csv -NoTypeInformation
+```Get-Mailbox -ResultSize Unlimited | % { Get-InboxRule -Mailbox $_.Alias | Select Enabled,Name,Priority,From,SentTo,CopyToFolder,DeleteMessage,ForwardTo,MarkAsRead,MoveToFolder,RedirectTo,@{Expression={$_.SendTextMessageNotificationTo};Label="SendTextMessageNotificationTo"},MailboxOwnerId } | Export-Csv C:\Users\username\Desktop\it\o365\forwards.csv -NoTypeInformation```
 
 
 Update user data
- $user_file | ForEach {Set-user $_.login_name -Title $_.title -Department $_.department -Office $_.office -Manager $_.manager}
+```$user_file | ForEach {Set-user $_.login_name -Title $_.title -Department $_.department -Office $_.office -Manager $_.manager}```
 
 set user data
 $user_file | ForEach {Set-user $_.login_name -Title $_.title -Department $_.department -Manager $_.manager -StreetAddress $_.Address -StateOrProvince $_.State -City $_.City -PostalCode $_.Zip} 
