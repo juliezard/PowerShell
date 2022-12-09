@@ -37,21 +37,25 @@ Export Rules:
 
 
 Update user data
+
 ```$user_file | ForEach {Set-user $_.login_name -Title $_.title -Department $_.department -Office $_.office -Manager $_.manager}```
 
 set user data
-$user_file | ForEach {Set-user $_.login_name -Title $_.title -Department $_.department -Manager $_.manager -StreetAddress $_.Address -StateOrProvince $_.State -City $_.City -PostalCode $_.Zip} 
-$user_file | ForEach {Set-AzureADuser -ObjectId $_.login_name -TelephoneNumber $_.Work -Mobile $_.Mobile}
+
+```$user_file | ForEach {Set-user $_.login_name -Title $_.title -Department $_.department -Manager $_.manager -StreetAddress $_.Address -StateOrProvince $_.State -City $_.City -PostalCode $_.Zip} 
+$user_file | ForEach {Set-AzureADuser -ObjectId $_.login_name -TelephoneNumber $_.Work -Mobile $_.Mobile}```
 
 get list of blocked users...remove manager
-Get-MsolUser -All | Where {$_.BlockCredential -eq $True} | Select UserPrincipalName | Export-CSV "C:\Users\username\Desktop\it\o365\blocked.csv"
+
+```Get-MsolUser -All | Where {$_.BlockCredential -eq $True} | Select UserPrincipalName | Export-CSV "C:\Users\username\Desktop\it\o365\blocked.csv"
 $user_file | ForEach {Set-user -Identity $_.login_name -Manager $Null}
-$user_file = Import-CSV "C:\Users\username\Desktop\it\o365\blocked.csv"
+$user_file = Import-CSV "C:\Users\username\Desktop\it\o365\blocked.csv"```
 
 Update distro
-Add-DistributionGroupMember -Identity "distributionlistname" -Member "user@domain.com"
 
-$user_file = Import-CSV distroHouston.csv
-$user_file | ForEach {Add-DistributionGroupMember -Identity "allhouston" -Member $_.member}
+```Add-DistributionGroupMember -Identity "distributionlistname" -Member "user@domain.com"```
 
-Unblock-File -Path C:\Downloads\script1.ps1
+```$user_file = Import-CSV distroHouston.csv```
+```$user_file | ForEach {Add-DistributionGroupMember -Identity "allhouston" -Member $_.member}```
+
+```Unblock-File -Path C:\Downloads\script1.ps1```
