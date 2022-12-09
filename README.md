@@ -25,7 +25,7 @@ website with info ***https://theitbros.com/add-calendar-permissions-in-office-36
 foreach ($user in $users) {
 Write-Host -ForegroundColor green "Setting permission for $($user.alias)..."
 Set-MailboxFolderPermission -Identity "$($user.alias):\calendar" -User Default -AccessRights Reviewer
-}
+}```
 
 
 Get connected:
