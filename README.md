@@ -43,7 +43,8 @@ Update user data
 set user data
 
 ```$user_file | ForEach {Set-user $_.login_name -Title $_.title -Department $_.department -Manager $_.manager -StreetAddress $_.Address -StateOrProvince $_.State -City $_.City -PostalCode $_.Zip} 
-$user_file | ForEach {Set-AzureADuser -ObjectId $_.login_name -TelephoneNumber $_.Work -Mobile $_.Mobile}```
+$user_file | ForEach {Set-AzureADuser -ObjectId $_.login_name -TelephoneNumber $_.Work -Mobile $_.Mobile}
+```
 
 get list of blocked users...remove manager
 
