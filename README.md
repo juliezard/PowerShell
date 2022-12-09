@@ -48,7 +48,7 @@ $user_file | ForEach {Set-user -Identity $_.login_name -Manager $Null}
 $user_file = Import-CSV "C:\Users\username\Desktop\it\o365\blocked.csv"
 
 Update distro
-Add-DistributionGroupMember -Identity "distrubutionlistname" -Member "user@domain.com"
+Add-DistributionGroupMember -Identity "distributionlistname" -Member "user@domain.com"
 
 $user_file = Import-CSV distroHouston.csv
 $user_file | ForEach {Add-DistributionGroupMember -Identity "allhouston" -Member $_.member}
