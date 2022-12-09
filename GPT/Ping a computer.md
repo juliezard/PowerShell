@@ -1,7 +1,6 @@
-# This script prompts the user for a computer name and then pings the computer to check if it is online. If the computer is online, it displays the IP address and the response time.
+```# This script prompts the user for a computer name and then pings the computer to check if it is online. If the computer is online, it displays the IP address and the response time.
 
-
-```# Prompt the user for a computer name
+# Prompt the user for a computer name
 $computer = Read-Host "Enter a computer name"
 
 # Ping the computer and store the results in a variable
