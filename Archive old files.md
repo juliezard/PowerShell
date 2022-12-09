@@ -1,4 +1,5 @@
-```# This script will find all files in the current directory that have not been modified in the last 30 days, and then move them to an "Archived" folder:
+```
+# This script will find all files in the current directory that have not been modified in the last 30 days, and then move them to an "Archived" folder:
 
 $date = (Get-Date).AddDays(-30)
 $files = Get-ChildItem | Where-Object {$_.LastWriteTime -lt $date}
