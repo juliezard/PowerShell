@@ -36,3 +36,5 @@ if ($failedUpdates.Count -gt 0) {
     Write-Output "All updates were installed successfully"
 }
 ```
+
+This script can be run on a Windows system to check for any pending updates and install them automatically. It also checks for any failed updates and displays a message if any were found.
