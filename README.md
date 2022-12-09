@@ -20,6 +20,7 @@ Add-MailboxFolderPermission username:\calendar –user username –accessrights 
 
 
 **Default for all users**
+
 ```$users = Get-Mailbox -Resultsize Unlimited```
 
 ```foreach ($user in $users) {
