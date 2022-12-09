@@ -1,3 +1,5 @@
+# Check for locked accounts and output what they are
+
 ```# Import the Active Directory module
 # Import-Module ActiveDirectory
 
