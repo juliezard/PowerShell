@@ -22,7 +22,7 @@ Add-MailboxFolderPermission username:\calendar –user username –accessrights 
 **Default for all users**
 ```$users = Get-Mailbox -Resultsize Unlimited```
 
-```foreach ($user in $users) {```
+```foreach ($user in $users) {
 ```Write-Host -ForegroundColor green "Setting permission for $($user.alias)..."
 Set-MailboxFolderPermission -Identity "$($user.alias):\calendar" -User Default -AccessRights Reviewer
 }```
@@ -53,4 +53,4 @@ Add-DistributionGroupMember -Identity "distrubutionlistname" -Member "user@domai
 $user_file = Import-CSV distroHouston.csv
 $user_file | ForEach {Add-DistributionGroupMember -Identity "allhouston" -Member $_.member}
 
-Unblock-File -Path C:\Downloads\script1.ps1```
+Unblock-File -Path C:\Downloads\script1.ps1
