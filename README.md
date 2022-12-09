@@ -1,4 +1,6 @@
 # PowerShell
 
 
-List of useful PowerShell scripts
+My list of useful PowerShell scripts
+
+Use powershell.exe command to run
