@@ -7,7 +7,7 @@ Get connected:
 
 - ```Connect_AzureAD -Confirm```
 - ``` $Credential = Get-CredentialConnect_AzureAD -Confirm``` 
-disconnect
+- ```disconnect```
 - ```Get-PSSession | Remove-PSSession```
 
 o365 powershell calander
@@ -53,4 +53,4 @@ Add-DistributionGroupMember -Identity "distrubutionlistname" -Member "user@domai
 $user_file = Import-CSV distroHouston.csv
 $user_file | ForEach {Add-DistributionGroupMember -Identity "allhouston" -Member $_.member}
 
-Unblock-File -Path C:\Downloads\script1.ps1
+Unblock-File -Path C:\Downloads\script1.ps1```
