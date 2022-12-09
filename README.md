@@ -13,8 +13,8 @@ disconnect
 o365 powershell calander
 website with info ***https://theitbros.com/add-calendar-permissions-in-office-365-via-powershell/***
 
-Add-MailboxFolderPermission username:\calendar –user username –accessrights reviewer```
-- ``` Set-MailboxFolderPermission username:\calendar –user username –accessrights reviewer```
+- ```Add-MailboxFolderPermission username:\calendar –user username –accessrights reviewer```
+- ```Set-MailboxFolderPermission username:\calendar –user username –accessrights reviewer```
 - ```Remove-MailboxFolderPermission user.name:\calendar –user user.name```
 
 
