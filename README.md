@@ -30,9 +30,11 @@ Set-MailboxFolderPermission -Identity "$($user.alias):\calendar" -User Default -
 
 
 Get connected:
+
 ```Connect-EXOPSSession -UserPrincipalName user@domain.com```
 
 Export Rules:
+
 ```Get-Mailbox -ResultSize Unlimited | % { Get-InboxRule -Mailbox $_.Alias | Select Enabled,Name,Priority,From,SentTo,CopyToFolder,DeleteMessage,ForwardTo,MarkAsRead,MoveToFolder,RedirectTo,@{Expression={$_.SendTextMessageNotificationTo};Label="SendTextMessageNotificationTo"},MailboxOwnerId } | Export-Csv C:\Users\username\Desktop\it\o365\forwards.csv -NoTypeInformation```
 
 
